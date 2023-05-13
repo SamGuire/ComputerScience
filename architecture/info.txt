@@ -1,0 +1,1 @@
+This portion deals with general software architecture. Alot of learning here is based on the book 'Designing Data Intensive Application'.

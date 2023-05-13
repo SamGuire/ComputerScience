@@ -1,0 +1,63 @@
+====== PROPER MEMEORY REALLOCATION AND READ ===============
+==41677== Memcheck, a memory error detector
+==41677== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==41677== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==41677== Command: ./n-array
+==41677== 
+1 2 3 4 5 6 7 8 9 10 
+1 2 3 4 5 7 8 9 10 
+==41677== 
+==41677== HEAP SUMMARY:
+==41677==     in use at exit: 0 bytes in 0 blocks
+==41677==   total heap usage: 3 allocs, 3 frees, 4,172 bytes allocated
+==41677== 
+==41677== All heap blocks were freed -- no leaks are possible
+==41677== 
+==41677== For lists of detected and suppressed errors, rerun with: -s
+==41677== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+====== INVALID MEMORY READ AFTER REALLOCATION  ===============
+==41922== Memcheck, a memory error detector
+==41922== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==41922== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==41922== Command: ./n-array
+==41922== 
+==41922== Invalid read of size 4
+==41922==    at 0x109310: main (in /home/issamrobler/learning/datastructures/linkedlist/n-array)
+==41922==  Address 0x4a54114 is 0 bytes after a block of size 36 alloc'd
+==41922==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==41922==    by 0x1092EE: main (in /home/issamrobler/learning/datastructures/linkedlist/n-array)
+==41922== 
+1 2 3 4 5 6 7 8 9 10 
+1 2 3 4 5 7 8 9 10 0 
+==41922== 
+==41922== HEAP SUMMARY:
+==41922==     in use at exit: 0 bytes in 0 blocks
+==41922==   total heap usage: 3 allocs, 3 frees, 4,172 bytes allocated
+==41922== 
+==41922== All heap blocks were freed -- no leaks are possible
+==41922== 
+==41922== For lists of detected and suppressed errors, rerun with: -s
+==41922== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+
+
+
+======== INSERTION OUTPUT =======================
+==42804== Memcheck, a memory error detector
+==42804== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==42804== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==42804== Command: ./n-array
+==42804== 
+1 2 3 4 5 6 7 8 9 10 
+1 2 3 4 5 7 8 9 10 
+1 2 3 4 5 7 8 9 10 100 
+==42804== 
+==42804== HEAP SUMMARY:
+==42804==     in use at exit: 0 bytes in 0 blocks
+==42804==   total heap usage: 4 allocs, 4 frees, 4,212 bytes allocated
+==42804== 
+==42804== All heap blocks were freed -- no leaks are possible
+==42804== 
+==42804== For lists of detected and suppressed errors, rerun with: -s
+==42804== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

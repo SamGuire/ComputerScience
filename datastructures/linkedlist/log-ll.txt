@@ -1,0 +1,17 @@
+==45100== Memcheck, a memory error detector
+==45100== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==45100== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==45100== Command: ./n-linkedlist
+==45100== 
+1 2 3 4 5 6 7 8 9 10 
+1 2 3 4 5 7 8 9 10 
+1 2 3 4 5 7 8 9 10 100 
+==45100== 
+==45100== HEAP SUMMARY:
+==45100==     in use at exit: 0 bytes in 0 blocks
+==45100==   total heap usage: 13 allocs, 13 frees, 4,288 bytes allocated
+==45100== 
+==45100== All heap blocks were freed -- no leaks are possible
+==45100== 
+==45100== For lists of detected and suppressed errors, rerun with: -s
+==45100== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

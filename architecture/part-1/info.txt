@@ -1,0 +1,23 @@
+Main concerns governing software:
+	- Reliability: How well does your application deal with software and hardware faults.
+	- Maintainability: How well do new developers learn your software, add new features or make changes.
+	- Scalability: How well does your application deal with increased load (user activity)
+Reliability:
+	- MTTF = hour_of_operation / number_of_units
+	- For simplification, we can assume that : number_of_failures_in_day = number_of_units / MTTF (link to article: https://horia141.com/hard-disk-mttf.html)
+	- Reliability should be concerned regardless of how critical the system is. At the end of the day, you lose money if the system goes down.
+
+Scalability: 
+	- Scale up (better hardware), pros -> easier to maintain, can be cheaper (AT FIRST), cons -> gets very expensive in the long run, little fault tolarance.
+	- Scale out (more machines), pros -> can be cheaper in the long run, better fault tolarance and availability, cons -> Much harder to maintain due to added complexity to overall architecture
+	- When thinking about scalability issues, we must first describe what load actually contributes to this problem (User request, User activity, Data size etc) and how will our users 
+	  use our application. 
+	- A good metric to use when seeing how well our system performs is using median response time (50% percentile) and 99% percentile (1 out of 100 users will have a response time of X ms)
+	- Depending on the scale of the application, this might not even be an issue. Always plan well before actually working on a new software.
+
+Maintainability:
+	- Write good documentation
+	- Write clean code
+	- Write well defined API and Interfaces
+	- Make sure your software is well tested using unit tests and integration tests
+

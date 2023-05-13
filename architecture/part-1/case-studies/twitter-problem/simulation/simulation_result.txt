@@ -1,0 +1,4 @@
+######## non-cached web-server ##########
+Number of responses = 4700 ms
+Median = 23265 ms
+Max = 108401 ms

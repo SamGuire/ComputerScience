@@ -1,0 +1,2 @@
+This directory is dedicated for  new data strucutures that I have learned. Data structures that mostly focuses on memory management and memory efficiency (ex: Linked List vs Array)
+will be implemented using C but those focused more on algorithmic in nature (Binary Search Tree vs Binary Tree, Heaps, Stacks vs Queues etc) will be implemented using Java.  
