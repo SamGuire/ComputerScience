@@ -1,4 +1,12 @@
 ######## non-cached web-server ##########
-Number of responses = 4700 ms
-Median = 23265 ms
-Max = 108401 ms
+init time = 0 ms
+Number of responses = 4700 
+Median = 9161  ms
+Max = 15434 ms
+
+######## cached web-server (redis) #######
+init time = 7000 ms
+Number of responses = 4700
+Median = 6538 ms
+Max = 10655 ms
+

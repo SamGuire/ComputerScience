@@ -9,7 +9,7 @@ function random_number(max_possible_user_id) {
 
 async function makeCall() {
   let start = new Date();
-  await fetch(`${timelineURL}/:${random_number(10000)}`);
+  await fetch(`${timelineURL}/${random_number(10000)}`);
   let end = new Date();
   responsesInMS.push(end - start);
 }

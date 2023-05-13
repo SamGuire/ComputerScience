@@ -1,0 +1,1 @@
+We will be experimenting with two servers, one that simply makes queries to a mysql database and nothing more, and another that uses an in-memory database for performance. The in-memory store will be redis.

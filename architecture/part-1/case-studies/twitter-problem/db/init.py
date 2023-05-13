@@ -43,7 +43,7 @@ if __name__ == '__main__':
         create_db(cnx)
         create_tables(cnx)
         print(f'\n{BAR} MOCK DATA CREATION {BAR}\n')
-        data = generete_data(10000, 75, 30)
+        data = generete_data(3000, 75, 30)
         print(f'\n{BAR} MOCK DATA INSERTION {BAR}\n')
         insert_data_into_tables(cnx, data)
         print(f'\n{BAR} END {BAR}\n')
