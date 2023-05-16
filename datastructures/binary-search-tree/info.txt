@@ -1,0 +1,7 @@
+Binary Search Tree :
+	Data structure meant to process a stream of data in sorted order. Very useful
+	if you dont know the size of the data set at compile time and need to process them in
+	sorted order. 
+	For non-balanced BST : O(n) insertion, O(n) deletion, O(n) query
+	for balanced BST : O(logn) insertion,deletion, query
+	Java contains out of the box balanced BST (TreeMap)

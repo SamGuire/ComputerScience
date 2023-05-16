@@ -1,0 +1,5 @@
+Heaps : Data structure meant to quickly keep track of highest priority items.
+	Very useful processing data based on a priority criteria (id, computed val etc)
+	O(logn) insertion. extract next
+	O(1) get next to process
+	

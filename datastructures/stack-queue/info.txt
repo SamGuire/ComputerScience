@@ -1,0 +1,10 @@
+Stack : LIFO data structure usually used to make iterative versions of recursive algorithm.
+	very useful for DFS-type algorithms and deep traversal of datastructures.
+	O(1) push,pop,peek,isEmpty
+
+Queue : FIFO data structure usually used for BFS type algorithms and traversals and naive job 
+	scheduling.
+	O(1) enqueue,dequeue,front,isEmpty
+
+Both DS can be implemented with either arrays or linked lists. If the size is known at compile time,array can be used to save extra space (no need for pointers). If size needs to be dynamic, we can 
+make use of linked list. Java has an out-of-box implementation of both data structures.
