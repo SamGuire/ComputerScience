@@ -77,6 +77,39 @@ class BinarySearchTree {
 	// inorder traversal of BST (give sorted order of vals)
 	// L Root R
 
+	public int[] inorderMorris() {
+		int[] inorder = new int[this.size];
+		if (this.size <= 0) return inorder;
+		int idx = 0;
+		TreeNode cur = root;
+		while (cur != null) {
+			if (cur.left == null) {
+				inorder[idx++] = cur.val;
+				cur = cur.right;
+			} else {
+				// Find inorder predecessor
+				TreeNode predecessor = cur.left;
+				while (predecessor.right != null && predecessor.right != cur) predecessor = predecessor.right;
+				
+				// connector inorder predecessor of cur to cur
+				if (predecessor.right == null){ 
+					predecessor.right = cur;
+					cur = cur.left;
+				} // Fix references lazily 
+				else {
+					predecessor.right = null;
+					inorder[idx++] = cur.val;
+					cur = cur.right;
+				}
+			}
+		}
+		if (idx < this.size) {
+			this.size = idx;
+			return Arrays.copyOf(inorder,idx);
+		}
+		return inorder;
+	}
+
 	public int[] inorder() {
 		int[] inorder = new int[this.size];
 		if (this.size <=0) return inorder;
@@ -104,7 +137,7 @@ class BinarySearchTree {
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		int[] inorderVals = this.inorder();
+		int[] inorderVals = this.inorderMorris();
 		sb.append("Inorder BST -> ");
 		for (int v: inorderVals) {
 			sb.append(v);
