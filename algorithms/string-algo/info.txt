@@ -1,0 +1,21 @@
+KMP (Knuth-Morris-Pratt) Algorithm:
+	Desc: The first linear time algorithm for string matching. 
+	time comp : O(m + n) (Pattern size -> m, Text size -> n)
+	space comp: O(m) (table to store proper prefix/suffix) 
+	properties :
+		(text is a group of repeating substring) <- -> (prefix_array[m-1] != 0 AND n-prefix_array[m-1] = (size of repeating substring) AND prefix_array[m-1] * (size of repeating substring) == 0)
+
+
+General Properties of strings :
+	- T is rotate(S) <-> (S+S) contains T
+	- ascii a-z -> [65,90]
+	- ascii A-Z -> [97-122]
+	- extended ascii uses 8 bits -> 2^8 unique characters (0-255)
+	- ascii uses 7 bits -> 2^7 unique charactes (0-127)
+	- utf-8 is compatible with ascii and extended ascii because it uses 1 byte (8 bits) to represent a character
+	- utf-16 not compatible with ascii or extended ascii because it used 2 bytes (16 bits) to represent a character
+	- strings are stored as arrays of chars internally. However, the key properties of strings in alot of languages is that it is immutable (no inplace modfications).
+	  This property is mainly due to security reasons and the fact that strings are some of the most common data type we use when solving problems. Making it immutable makes it thread safe
+	  and relieves us from making sure that no two variables are modifying the same string.
+	- S is palindrome <-> s0 == sN && S[1..N-1] is palindrome.
+
