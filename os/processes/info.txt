@@ -1,0 +1,64 @@
+Processes:
+	A program that is running on a computer. A program is said to be passive when it is not running
+	but stored on disk for later. The program becomes a process when it is loaded in memory
+	and it starts running. A program can be linked to many processes assuming many uses are
+	accessing the computer at the same time.
+	
+	memory layout :
+		[	stack memory		]
+		[		|		]
+		[		v		]
+		[	-------	--------	]
+		[			        ]
+		[		^		]
+		[		|	        ]
+		[	-------	--------	]
+		[	heap memory		]
+		[				]
+		[	-------	--------	]
+		[				]
+		[	global  data		]
+		[	------	-------		]
+		[				]
+		[	text 			]
+		[	------	-------		]
+
+
+	Stack -> temp data (call stack data, local variables etc)
+	Heap -> Dynamically alocated data (malloc), YOU CONTROL THIS, SO BECAREUL FOR MEMORY LEAKS;
+	Global -> static/global variables
+	text -> code instruction (actual code itself)
+
+
+	Main state of a processes :
+		- Running (executing)
+		- Waiting (waiting for io or event)
+		- Ready (ready to start executing after receiving io/event completion)
+		- Terminated (exited)
+	
+
+	PCB (Process control block): 
+		- Information that stores everyting related to a process
+		- process info can be found /proc/{pid} file on linux
+		- Information stored : 
+			- Current state
+			- Memory allocated to process
+			- CPU usage
+			- IO usage
+			- Program counter (next instruction to execute)
+
+
+	Process scheduling:
+		- Mecanism on a computer that handles switching exection between process
+		- very fast to humans (gives illusion of multiple processes running at the same time)
+		- Main goal of this mechanism is to maximize cpu usage to keep the computer busy and 
+		  efficient.
+	
+	Context switch:
+		- The event when a CPU switches to another process to execute.
+		- very costly (relative to a computer)
+		- main event : save current process state -> load other process state -> execute other
+		  process
+		- The time it takes to switch to another process is dependent on the complexity of the
+		  PCB block and the actual hardware of the CPU.
+		

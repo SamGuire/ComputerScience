@@ -1,0 +1,10 @@
+Forking :
+	When a parent process creates a child process. Useful if you want your main process to spawn children to do different work.
+	If the parent process is terminated before other children are done, the children become orphaned processes. Children processes become zombie processes if they terminate but their parent do
+	not handle their exit status (i.e wait(&child_exit_status)). While the child remains a zombie, their info is still remains in the process table (i.e htop).
+
+Pipes:
+	IPC tool to allow pairs of processes to communicate with each other. read and writes are blocking operation (i.e read blocks until data or EOF signal, write blocks until enough space in fd)
+					
+
+							P0 -> [ pipe ] -> P1

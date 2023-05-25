@@ -1,0 +1,5 @@
+Shared Memory:
+	As the name suggest, shared memory is memory that can be shared with multiple
+	processes. When created and filled with a value, you can see its content in
+	/dev/shm directory. Simple to implement but the complexity lies in synchronization 
+	between multiple processes.
