@@ -1,0 +1,17 @@
+Browser render html as a tree-like structure called the DOM (Document Object Model). Alot of librairies and frame workds absract from the manual manipulation of the DOM tree nodes, but that
+is what it basically does behind the scene.
+
+SPA (Single Page Application): 
+	Technique developed in the early 2000s. Browser make VEEEERY little calls to the back end for anything related to presentation. Most, if not, all the rendering is done on the client side with JS 	   code. The actual page the user is on dosen't change. Instead, JS code replaces the contents of the html to simulate view change. Good thing,s is that users don't need to make many calls on the
+	back-end for anything not data related. Presentation is handled on the client side. Bad thing is that, load and complexity is placed on the client side and SEO (web/search crawlers) have harder
+	time analyzing the web page.
+
+MPA (Multiple Page Application):
+	New html/css/js files gets requested when going to another page. Less load on the client side but more app usablity is VERY dependent on network. SEOs like these types of application due to
+	having actual hyperlinks and text to anaylyze.
+
+Events: 
+	- Three phases :
+		- capturing (go DOWN the DOM tree to which element was clicked,i.e the target ) (event not fired during this phase by default)
+		- target ( found the element ) (event fired for target element clicked)
+		- bubbling (go back UP the DOM tree ) (event fired going up by default )

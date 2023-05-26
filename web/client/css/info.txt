@@ -1,0 +1,8 @@
+CSS (Cascading Style Sheet):
+	- Document descrbing style of a webpage. Decouples styling and static positioning of page elements.
+	- User agent -> browser, author -> creator of css file, reader -> user of browser
+	- position: absolute -> position based on first ancestor with non-default position, position: relative -> position relative to where he SHOULD be
+	- style precedence rule:
+		I : ID'd elements (<div id="myID"></div> -> #myId)
+		C : elements with class, pseudo class (<div class="myClass"></div> -> .myClass)
+		E : Element name (<div></div> -> div)
