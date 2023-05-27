@@ -1,0 +1,24 @@
+Threads:
+	"Light weight processes", A process can have multiple threads that share the same global/static
+	variable, code text, files and heap memory. However, threads DO NOT SHARE stack data and program counter (current execution step).
+	
+	Main difference between thread and process:
+		- Much lighter than process (faster to switch between threads than processes)
+		- process can take advantage of multiple cores more efficiently using threads
+	
+	Parallellism -> t0 t2 t4 ........ t2n        ( supports multipple threads running at the SAME TIME)
+			t1 t3 t5 ........ t2n+1
+
+	concurrency -> t0 t1 t2 t3 .... t2n t2n+1 t0 t1...... ( supports mulplte threads progressing with their task )
+
+
+	Multi thread architecture:
+		- Server has N threads to server  N request
+		- client send request -> server assign request to thread -> thread do work and return result -> main server thread get result ->
+		  main server thread give result back to client
+
+	Single thread architecture:
+		- Server has ONE thread listening for request.
+		- Depending on what type of request it is, it will either assign thread to worker thread (blocking io, ie file reads,db calls etc) or handle it itself
+		- system maintains repository for incoming request and response for main thread to pick up and evaluate (nodejs has a event queue to keep track of request
+		  to handle and the stack for non blocking io)
