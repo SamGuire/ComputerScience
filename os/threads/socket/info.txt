@@ -1,0 +1,16 @@
+Socket :
+	Abtraction that represent an endpoint to a connection in a network. Socket is of form host_name:port
+	ex: 127.0.0.1:3000. When a client connects to a server socket, A connection is created and
+	potentially accepted by the server. Afterwards, two way communication link is created until
+	either one closes the connection.
+	
+	
+		CLIENT							SERVER
+		   0	--->					    <---   0
+				[ ...........................]
+
+		   1	<---					    --->   1
+
+		
+		0: output stream to send data to connection link
+		1: input stream to read data sent through connection link
