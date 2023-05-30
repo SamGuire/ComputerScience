@@ -1,0 +1,36 @@
+Java :
+	- Developed and introduced in the mid 90s, Java was first created for TVs but was way to advanced of a programming language at the time.
+	- The intent of the language was to make it portable across multiple computers, regardless of hardware and make it easy to write (compared to C/C++) while still
+	  having good performance.
+	- Java compilation : code -> byte code (.class file) -> native machine code (JIT compiler/ "convert when necessary during run time")
+	- Code linking (linking pieces of code from different files) is done during run time.
+	- JVM (java virtual machine) is a specification that describes how JVM code should be handled. JVM does not describe implementation but only specs. JVM can be implemented
+          in many different ways, depending on the OS. The JVM will handle loading and converting java code to actual native machine code.
+	- javac (java compiler) is written in java (WEIRD LOL), it makes use of the concept of bootstraping, which is when you design the base functionality of the compiler using aanother language
+	  then, when sufficient functionality is done, create the rest using the new language you are trying to create. Pretty mindbloging haha.
+	- Bootstraping process (IN VERY SIMPLE TERMS, assuming you want to create a compiler for new language L):
+		1. Create a BASE compiler (parse and intepret text from file) in pre-existing language H.
+		2. With this base compiler, that now understands and can intepret text written in lanugage L, create the instruction on how to compile and understand language L in language L.
+		3. Congrats, you now have a compiler that understands L. You can now write extensions to the compiler for languag L in L.
+		
+		Visual (using javac)
+			Bootstraping step:	[Java	->	V1.exe]				[Java  ->         V1.exe]
+							[C] [ C 		-> 	          c.EXE ]  [c.EXE]			
+									[Machine specfiic code]
+
+
+
+
+
+
+											[Java --------------> V2.exe]
+	
+			Self compiling code: [Java -> V2.exe]		[Java ---------> V2.exe][V2.exe]	
+						[Java]  [Java ----> V1.exe ]	[V1.exe]
+				 				[V1.exe]
+
+
+	- Pros/cons: 
+		- Pros: Portability, Extensive support, Easy of use (relative to C), pretty good performace.
+		- Cons: Verbose, (RAM) memory intensive due to running the JVM implementation, slow compared to C to due run-time class loading and JIT compilation from byte to native machine.	
+				 		
