@@ -1,0 +1,14 @@
+Java classes:
+	modifier:
+		public -> evveryone can see
+		protected -> same class, child class and package only
+		private -> same class only
+	methods:
+		- methods of reference return type C can accept return object of type C or type that EXTENDS/IMPLEMENTS C (i.e child type)
+	class (static) methods/variables:
+		- static methods can only access static variables (duh)
+		- static final -> global const, final -> one initialization only
+	enums:
+		- in Java, enums are const instances (yeah, thats crazy), you can add treat enums like a normal classes.
+		- enums constructor cant be called.
+		- internally, jave creates const instance variables for each enum values.

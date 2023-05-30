@@ -1,0 +1,3 @@
+Functions in java:
+	- support method overloading
+	- no default parameter value support (might need to take advantage of method overloading)

@@ -1,0 +1,8 @@
+Java exceptions:
+	- For methods that might throw checked exceptions (file reading,db access etc), you must either include "throws" keyword for the class or handle it in the method using try-catch
+	- use try-with-resource for file reading and/or db access. much more readable and safer
+	- make sure to include finally for extra cleanup.
+	- You can create uncheked exception, make an class that extends runtime exception. A checked exception is one that does not extend from runtime exception.
+	- Exceptions address the robustness of your application while assertions address its correctness.
+	- assertions are disabled by default, but very useful during development time, to make sure your code is correct. Could be useful for private methods and/or methods that arent
+	  directly used by the public. If a bug ever occurs, you can enable assertion on your local machine and run the application. The assertion keyword might catch a bug.
