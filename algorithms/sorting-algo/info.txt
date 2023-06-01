@@ -1,0 +1,3 @@
+Sorting algo:
+	- classic algos used for sorting items
+	- O(n2) -> bubble sort (never use pls), insertion sort (useful if you know that that items are ALMOST sorted)

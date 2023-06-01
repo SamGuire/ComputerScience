@@ -1,0 +1,10 @@
+Algorithms:
+	- set of instructions to solve a problem.
+	- algos are important regardless if we get better hardware because if the input size of the problem grows, eventually the hardware will not keep up.
+	- space and time needs to be considered, however space is the cheaper aspect of machines, RAM is getting cheaper and cheaper so time is becoming more of a bottleneck.
+	- RULE OF THUMB: Make the algorithm simple and easy to read first in the real world, alot of the time, your bottleneck isnt cpu instrcution but I/O related (db calls, network, etc)
+	- O(1) < O(lgn) < O(n) < O(nlgn) <  O(n2) < O(n3) < O(2^n) < O(n!)
+	- Pure algorithms (algo using nothing but pure data and arrays) will be implemented using python. Algorithms that require knowing more about data structures and data types will be
+	  implemented with java. ex : sorting algos, dp algorithms, classic greedy algos -> python, 
+				      tree algos, string parsing and manipulation, bit manipulation algos, graph traversal -> java
+

@@ -1,0 +1,32 @@
+AngularJS:
+	- Developed by Google to simply SPA development.
+	- Makes use of MVC architecture where the Model is how the data looks in memory, the View is the template to represent said data and the Controller which represents how the model and view are 
+	  kept in sync.
+	- Apps developed using AngularJS should initalized the root html with the ng-app attirbute. HTML attributes are mapped with js created modules and components via text normalization which 
+	  converts kebab-case to camelCase (i.e "my-component" in html maps to "myComponent" in js).
+	- General rule of thumb is that with any new feature or UI component, you should first create its own standalone module THEN insert the related components of the feature inside the module.
+	  This will make your code much more usuable and increase seperation of concern. However you must make sure to add newly created modules as dependencies to parent modules.
+	- Parent and child components can communicate with each other via props, the way they communicate is with the 'bidings' object. 
+	  ex:
+		in parent html:
+			<div>
+				<child a="1'></child>
+			</div>
+
+		in child js:
+			...
+			bindings : {
+					a = '@' // child component can reference 'a' prop now. just do $ctrl.a
+				}
+	- bidings could be made for functions and plain attributes. 
+		symbols:
+			'@' -> treat prop as is (not meant for function)
+			'<' -> take prop but any changes in current component does not get propagated to parent
+			'=' -> take prop but any changes to prop gets propagated to parent
+			'&' -> treat this prop as a pointer to a function
+	- scopes objects inherit from parent scope
+	- directives are elements/attribute related to angularjs
+	- use controller to manipulate data for the view
+	- use services for reusable logic. srvices are created with factories which returns an objects with a set of service methods
+	- angularjs has a set of predifined servies like $http which is a wrapper to XMLHTTPRequest to make http calls to other services and $q which is a promise wrapper. 
+					
