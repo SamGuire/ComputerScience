@@ -1,0 +1,16 @@
+<html ng-app="myAngularApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="./pages/home/home.module.js"></script>
+    <script src="./pages/home/home.component.js"></script>
+    <script src="./pages/data/data.module.js"></script>
+    <script src="./pages/data/data.component.js"></script>
+    <script src="./model/user/user.module.js"></script>
+    <script type="module" src="./model/user/user.component.js"></script>
+    <script src="./app.module.js"></script>
+  </head>
+  <body>
+    <div ng-view></div>
+  </body>
+</html>

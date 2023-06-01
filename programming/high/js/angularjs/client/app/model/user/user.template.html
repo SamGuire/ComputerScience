@@ -1,0 +1,9 @@
+<div>
+  Filter <input ng-model="textFilter" />
+  <ul>
+    <li ng-repeat="user in $ctrl.users | filter:textFilter">
+      {{user.first_name}} {{user.last_name}}
+    </li>
+    {{textFilter}}
+  </ul>
+</div>
