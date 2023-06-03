@@ -1,0 +1,7 @@
+Hibernate:
+	- You must use cascade annotation if you want to cascade repo operation
+	  (i.e insert update etc)
+	- The mappedBy attrubute descrives the instance variable of the
+	  entity that OWNS the foreign key (i.e has the foreign key as column)
+	- Make sure to wire up you services and repository (Autowire)
+
