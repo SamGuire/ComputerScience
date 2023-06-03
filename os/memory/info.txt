@@ -1,0 +1,12 @@
+Memory:
+	physical memory: RAM memory
+	virtual memory: Adresss space given to a process by the OS
+	
+	- virtual memory -> MMU (does mapping) -> physical memory
+	- each process has his own page table and each page of a process may or may not be in memory (might need to be fetched with i/o).
+	- different algorithms exists for page/frame replacement (frame is physcial memory area, page is subset of virtual memory). LRU (Least recently used) is frequently use.
+	- You can examine virtual adrress space in /proc/<pid>/map and /proc/<pid>/smap
+
+	- os makes use of page table to determine where to place a process page into physical memory.
+	- 64-bit os -> 2^64 unique virtual addresses, more scalable than 32-bit os -> 2^32 unique virutal address = around 4GB of RAM
+	- under 4gb -> 32-bit os is sufficient, over 4 gb -> 32-bit os can become a bottleneck because it can only process at most 2^32 virtual adresses
