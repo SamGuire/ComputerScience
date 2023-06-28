@@ -1,13 +1,11 @@
-create table if not exists child_a (
-    id integer primary key
+create table if not exists app_user (
+    user_id uuid primary key not null,
+    email varchar(360) not null unique,
+    hashed_password varchar(255) not null
 );
 
-create table if not exists child_b (
-    id integer primary key
-);
-
-create table if not exists root (
-    id integer primary key,
-    child_a_id integer references child_a (id),
-    child_b_id integer references child_b (id)
+create table if not exists app_user_refresh_token (
+    user_id uuid references app_user(user_id),
+    refresh_token uuid not null unique,
+    expire_date timestamp default now() + interval '24' hour
 );

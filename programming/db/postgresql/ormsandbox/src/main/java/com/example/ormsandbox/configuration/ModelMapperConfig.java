@@ -1,4 +1,4 @@
-package com.example.ormsandbox;
+package com.example.ormsandbox.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

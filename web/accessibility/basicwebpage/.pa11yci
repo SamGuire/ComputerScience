@@ -1,0 +1,13 @@
+{
+  "urls": [
+    {
+      "url": "http://localhost:8080/",
+      "wait": 5000,
+      "action": [
+        "click element #submitBtn",
+        "wait for path to be /about.html"
+      ]
+    },
+    "http://localhost:8080/about.html"
+  ]
+}
